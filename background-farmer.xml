@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Farmer</name>
+		<description>Farmer Background</description>
+		<author url="http://dnd.wizards.com/products/tabletop-games/rpg-products/rpg_playershandbook">Wizards of the Coast</author>
+		<update version="0.0.6">
+			<file name="background-farmer.xml" url="https://raw.githubusercontent.com/aurorabuilder/elements/master/core/players-handbook/backgrounds/background-farmer.xml" />
+		</update>
+	</info>
+
+	<element name="Farmer" type="Background" source="Homebrew" id="ID_BACKGROUND_FARMER">
+		<description>
+			<p>You were what most common folk are–a farmer. You worked on a lord's estate, their land, or you worked for a company and you produced resources from the land in return for food, shelter, clothing, protection, and other benefits. Farmers focus on raising living things and harvesting various useful goods–mostly food–from the land. Farmers make up the vast majority of the peasantry, alongside other raw resource producers, such as miners and fishermen. Farmers are a hearty, enduring folk, they work long hours under the sun often doing dirty and exhausting or even disgusting work.</p>
+			<p class="indent">How did you become a farmer, and for how long were you one? </p>
+			<p class="indent">What did you do on your farm? Were you the landlord of the farm, or were you just a farmhand? </p>
+			<p class="indent">What caused you to leave that life behind? Was your home destroyed by war? Were you cast out for some crime? Did you flee taxes you could not pay? Were you called to join the Lord's army? Was your home stolen by an unscrupulous rival? </p>
+			<p class="indent">How did you learn your current profession? </p>
+			<ul class="unstyled">
+				<li><strong>Skill Proficiencies:</strong> Animal Handling, Nature</li>
+				<li><strong>Tool Proficiencies:</strong> farm implements, vehicles (land)</li>
+				<li><strong>Equipment:</strong> A farm implement (such as a pitchfork or shovel), a set of work clothes or common clothes, a wide brimmed hat, a sack containing 5 gp worth of trade goods, and a belt pouch containing 5 gp or 1d4+2 gp.</li>
+			</ul>
+			<h5>FARM</h5>
+			<p>Not every farm is alike; there are a vast range of goods produced by farmers of different sorts, and nearly all farms focus on just one product or a limited group of products</p>
+			<table>
+				<thead>
+					<tr><td class="col-20">d6</td><td>Specialization</td></tr>
+				</thead>
+				<tr><td>1</td><td>Rancher. You raised animals for slaughter most likely for food, but also for leather, furs, and other useful materials.</td></tr>
+				<tr><td>2</td><td>Grazier. You harvested goods produced by animals such as milk, eggs, feathers, or wool.</td></tr>
+				<tr><td>3</td><td>Stockman. You bred animals to sell for work or as pets such as guard dogs, racing horses, and griffons.</td></tr>
+				<tr><td>4</td><td>Peasant. You harvested edible or useful plants such as wheat, corn crops, or apples at an orchard.</td></tr>
+				<tr><td>5</td><td>Forester. You grew trees for ornament or construction such as trees grown for bow staves, boat masts, or buildings.</td></tr>
+				<tr><td>6</td><td>Silk. You raised silk worms or another exotic animal, and harvested their silk.</td></tr>
+            </table>
+			<div element="ID_BACKGROUND_FEATURE_OF_THE_LAND" />
+			<h5>SUGGESTED CHARACTERISTICS</h5>
+			<p></p>
+		</description>
+		<setters>
+			<set name="short">Animal Handling, Nature, Farm Implements, Vehicles (Land)</set>
+		</setters>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_ANIMALHANDLING" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_NATURE" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_VEHICLES_LAND" />
+			<grant type="Background Feature" id="ID_BACKGROUND_FEATURE_OF_THE_LAND" requirements="!ID_INTERNAL_GRANT_OPTIONAL_BACKGROUND_FEATURE" />
+			<select type="Background Feature" name="Variant Feature" supports="Optional Background Feature" optional="true" />
+			<select type="Proficiency" name="Farm Implements" supports="Farm Implements" />
+			<select name="Specialization" type="List">
+				<item id="1">Rancher. You raised animals for slaughter most likely for food, but also for leather, furs, and other useful materials.</item>
+				<item id="2">Grazier. You harvested goods produced by animals such as milk, eggs, feathers, or wool.</item>
+				<item id="3">Stockman. You bred animals to sell for work or as pets such as guard dogs, racing horses, and griffons.</item>
+				<item id="4">Peasant. You harvested edible or useful plants such as wheat, corn crops, or apples at an orchard.</item>
+				<item id="5">Forester. You grew trees for ornament or construction such as trees grown for bow staves, boat masts, or buildings.</item>
+				<item id="6">Silk. You raised silk worms or another exotic animal, and harvested their silk.</item>
+			</select>
+			<select name="Personality Trait" type="List" number="2">
+				<item id="1">I'm always early to bed and early to rise.</item>
+				<item id="2">I keep my gear and supplies in careful check.</item>
+				<item id="3">I speak with a distinctive drawl or accent common to my class.</item>
+				<item id="4">I always save up as much as I can, spending and consuming only what I must.</item>
+				<item id="5">When work needs doing, I do the work.</item>
+				<item id="6">I keep constant track of the sun, moon, stars, seasons, and weather.</item>
+				<item id="7">I like to sleep in the sun when I can.</item>
+				<item id="8">I'm always chewing on a sprig of grass, a toothpick, tobacco, seeds, or preserved meat.</item>
+			</select>
+			<select name="Ideal" type="List">
+				<item id="1">Fill the Need. There are a lot of hungry mouths in the world, with enough hands the world can feed them all. (Good)</item>
+				<item id="2">It's a Living. I do what I'm good at because what I'm good at is good for me. (Neutral)</item>
+				<item id="3">Brutal Practicality. Bury a fish or bury a man, just get the job done. (Evil)</item>
+				<item id="4">Hard Work. A labor of love is a purpose and meaning. (Lawful)</item>
+				<item id="5">A Simple Way of Life. If it ain't broke, don't fix it! (Neutral)</item>
+				<item id="6">Amusement. Playing a hand in the growth and development of things delights me. (Chaotic)</item>
+			</select>
+			<select name="Bond" type="List">
+				<item id="1">I want to find that special someone and raise a home full of children.</item>
+				<item id="2">I'll never forget the family farm I grew up on.</item>
+				<item id="3">Some day, I'll be the lord of my own land.</item>
+				<item id="4">I want to become the biggest or best example of my profession to prove that I am the best!</item>
+				<item id="5">My son was sent to war and never returned. I must find him!</item>
+				<item id="6">I am out to start a homestead of my own in an unexplored fringe territory.</item>
+			</select>
+			<select name="Flaw" type="List">
+				<item id="1">I can be lazy and sleepy, sneaking off to take naps when work can wait.</item>
+				<item id="2">I am absurdly isolated, innocent, or pious.</item>
+				<item id="3">I believe in and obey my nation's nobility blindly.</item>
+				<item id="4">I abandoned my home to avoid taxation, conscription, or court and cannot return.</item>
+				<item id="5">I am not used to being wealthy and tend to overindulge.</item>
+				<item id="6">I show off to attractive people too much.</item>
+			</select>
+		</rules>
+	</element>
+
+	<element name="Feature: Of the Land" type="Background Feature" source="Player’s Handbook" id="ID_BACKGROUND_FEATURE_OF_THE_LAND">
+		<supports>Background Feature</supports>
+		<description>
+			<p>You lack the formal education of the higher classes, but for how little you may know there is a great deal that you understand. You have a practical, working knowledge of astrology and meteorology, and can easily track the time and date as well as predict the weather within a few hours, or days if you're lucky. You understand the "secrets of life"; the needs of life (water, light, air, salt, etc.), the patterns of physical inheritance, and the connections between different plants and animals.</p>
+		</description>
+		<sheet alt="Of the Land" />
+	</element>
+</elements>
